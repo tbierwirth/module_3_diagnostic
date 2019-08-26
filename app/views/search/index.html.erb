@@ -1,5 +1,5 @@
 <h1>Nearby Stations</h1>
-<% facade.stations_sorted.each do |station| %>
+<% facade.stations.each do |station| %>
   <ul class='station'>
     <h3 class='name'><%= station.name %></h3>
     <li class='address'><%= station.full_address %></li>

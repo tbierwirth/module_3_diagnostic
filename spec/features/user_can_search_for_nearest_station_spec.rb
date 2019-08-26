@@ -17,7 +17,7 @@ feature "User can search by zip" do
       expect(page).to have_css('.address')
       expect(page).to have_css('.fuel_type')
       expect(page).to have_css('.distance')
-      expect(page).to have_css('.access_times')
+      expect(page).to have_css('.hours')
     end
   end
 end
