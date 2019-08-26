@@ -1,0 +1,10 @@
+<h1>Nearby Stations</h1>
+<% facade.stations.each do |station| %>
+  <ul class='station'>
+    <h3 class='name'><%= station.name %></h3>
+    <li class='address'><p>Address: <%= station.full_address %></p></li>
+    <li class='distance'><p>Distance: <%= station.distance %></p></li>
+    <li class='fuel_type'><p>Fuel Type: <%= station.fuel_type %></p></li>
+    <li class='hours'><p>Hours: <%= station.hours %></p></li>
+  </ul>
+<% end %>
