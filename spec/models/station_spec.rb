@@ -3,14 +3,14 @@ require 'rails_helper'
 describe Station do
   it "exists" do
     attributes = {
-      name: "Quick Charge",
-      address: "335 Electric Ave",
+      station_name: "Quick Charge",
+      street_address: "335 Electric Ave",
       city: "Denver",
       state: "CO",
       zip: "80203",
-      fuel_type: "ELEC",
+      fuel_type_code: "ELEC",
       distance: "0.5",
-      hours: "M-F 6am - 10pm"
+      access_days_time: "M-F 6am - 10pm"
     }
     station = Station.new(attributes)
 
