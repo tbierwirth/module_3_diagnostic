@@ -1,7 +1,7 @@
 class NRELService
 
   def nearby_stations(zip)
-    get_json("alt-fuel-stations/v1/nearest.json?location=#{zip}&radius=6&fuel_type=ELEC,LPG&access_days_time&station_name&street_address&city&state&zip&distance&limit=11")
+    get_json("alt-fuel-stations/v1/nearest.json?location=#{zip}&radius=6&fuel_type=ELEC,LPG&access_days_time&station_name&street_address&city&state&zip&distance&limit=10")
   end
 
   private
@@ -14,7 +14,7 @@ class NRELService
 
   def get_json(url)
     response = conn.get(url)
-    JSON.parse(response.body, symboilize_names: true)
+    JSON.parse(response.body, symboilize_names: true)['fuel_stations']
   end
 
 end
